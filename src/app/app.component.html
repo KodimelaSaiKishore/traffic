@@ -1,0 +1,19 @@
+
+
+
+<div class="container d-flex m-auto" [ngStyle]="{
+  width: '100vw',
+  height: '100vh'
+}">
+<div class="d-flex flex-column m-auto">
+  <button class="btn btn-secondary mb-2" (click)="greenFun()">green</button>
+  <button class="btn btn-warning mb-1" (click)="yellowFun()">yellow</button>
+  <button class="btn btn-danger mt-1" (click)="redFun()">red</button>
+</div>
+  <div class="d-flex flex-column justify-content-center m-auto" [ngSwitch]="value">
+    <app-red class="mb-2" *ngSwitchCase="'red'"></app-red>
+    <app-yellow class="mb-1" *ngSwitchCase="'yellow'"></app-yellow>
+    <app-green class="mt-1" *ngSwitchCase="'green'"></app-green>
+    <h1 *ngSwitchDefault></h1>
+  </div>
+</div>
